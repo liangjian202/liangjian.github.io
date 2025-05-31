@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Simple HTML Page</title>
+    <script src="https://fastly.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 20px;
+        background-color: #f4f4f4;
+      }
+      h1 {
+        color: #333;
+      }
+      p {
+        color: #666;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Welcome to My Simple HTML Page</h1>
+    <p>This is a basic HTML page with some styling.</p>
+    <p>Feel free to modify the content and styles as you wish!</p>
+    <script>
+      console.log('This is a simple JavaScript console log message.')
+      document.addEventListener('DOMContentLoaded', function () {
+        alert('Page has loaded successfully!')
+        // 从 url 获取 querystring
+        const urlParams = new URLSearchParams(window.location.search)
+        const code = urlParams.get('code') || ''
+        const state = urlParams.get('state') || ''
+        console.log(`Code: ${code}, State: ${state}`)
+      })
+    </script>
+  </body>
+</html>
